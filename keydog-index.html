@@ -3,41 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for KeyDog - File Encryption, describing local file processing, key storage, sharing and deletion.">
     <title>Privacy Policy - KeyDog</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; padding: 24px; max-width: 800px; margin: 0 auto; color: #333; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; padding: 24px; max-width: 800px; margin: 0 auto; color: #333; overflow-wrap: anywhere; }
         h1, h2 { color: #111; }
         ul { padding-left: 20px; }
+        a { color: #185abc; }
     </style>
 </head>
 <body>
+<main>
     <h1>Privacy Policy for KeyDog - File Encryption</h1>
-    <p>Last updated: November 2026</p>
+    <p>Last updated: <time datetime="2026-11-04">November 4, 2026</time></p>
+    <p>KeyDog (密钥狗), application ID <code>com.keydog</code>, is a file encryption application provided by KongQBin (GitHub account: once512). This policy describes the current version, 1.0.0, including its closed-testing release.</p>
 
-    <p><strong>KeyDog - File Encryption</strong> ("we", "our", or "us") respects your privacy. This Privacy Policy outlines our practices regarding data handling and security when you use the KeyDog mobile application.</p>
+    <h2>1. Local processing and data collection</h2>
+    <p>KeyDog reads files and folders you select to encrypt or restore their contents. File contents, names, directory structure, sizes and integrity hashes are processed on your device to perform these operations and check the results. Encryption, decryption, password derivation and preset-passphrase recovery run locally.</p>
+    <p>The current app does not send your files, passwords, keys, device identifiers or usage activity to us. It does not require an account, operate an app backend, or include advertising, analytics or remote crash-reporting SDKs. We do not sell data from the app.</p>
 
-    <h2>1. Core Principle: Local Processing Only</h2>
-    <p><strong>Local Encryption and Decryption:</strong> KeyDog operates strictly as an offline-first file security utility. All cryptographic operations (encryption, decryption, and key derivation) are performed entirely on your device's local hardware.</p>
-    <p><strong>Zero Network File Transfer:</strong> We do not operate external file servers, remote databases, or cloud storage. Your selected files, encrypted containers, file names, and directories never leave your device.</p>
-    <p><strong>No Password Recovery:</strong> Passwords, PINs, or encryption keys are processed ephemerally in memory or within device-level keystores. We do not transmit or store your passwords. If you lose your decryption key or password, we cannot recover your encrypted data.</p>
+    <h2>2. File access and permissions</h2>
+    <p>KeyDog uses Android's system document picker (Storage Access Framework). You grant access to the files or folders you choose; folder access can include the files within that folder. The app may retain the system's document-access grant so it can finish or resume an operation and access that location later, subject to Android and the document provider's permissions.</p>
+    <p>The current version does not request Internet, all-files access (<code>MANAGE_EXTERNAL_STORAGE</code>), broad storage, notification, microphone, camera, contacts or location permissions.</p>
+    <p>The system picker may offer a cloud storage provider. If you choose one, that provider may download, upload or synchronize selected files, outputs and deletions under its own settings and privacy policy. Local cryptographic processing does not prevent transfers performed by a document provider.</p>
 
-    <h2>2. In-App Purchases and Subscriptions</h2>
-    <p>All financial transactions, subscriptions, and entitlement verifications are handled securely through Google Play Billing. We do not collect or store your payment details, credit card numbers, or billing addresses.</p>
-
-    <h2>3. Permissions Used</h2>
+    <h2>3. Data stored on your device</h2>
     <ul>
-        <li><strong>Storage / Manage External Storage:</strong> Required solely to read the files you choose to encrypt or decrypt, and to write the resulting files back to your device storage.</li>
-        <li><strong>Internet:</strong> Used exclusively for Google Play in-app billing verification and license status checks. It is never used to transmit or upload your files or user content.</li>
-        <li><strong>Notifications (POST_NOTIFICATIONS):</strong> Used optionally to show progress notifications during ongoing batch file encryption or decryption tasks.</li>
+        <li><strong>Output files and metadata:</strong> Encrypted containers and restored files are written to the selected destination. Containers carry original-file metadata for restoration and integrity checks. Encrypted filenames retain the original name followed by <code>.kdog</code>. Key filenames also include the original name, so filenames can reveal information even while file contents are encrypted.</li>
+        <li><strong>Key files:</strong> Generated <code>.kkey</code> files are stored in the app's private storage until you delete them or the app removes corresponding keys during undo or successful recovery. Android's app sandbox restricts access by other ordinary apps; key files are not separately protected by your encryption password. Keep exported keys secure and store threshold shares separately when appropriate.</li>
+        <li><strong>Passwords and preset passphrases:</strong> Password input is used for the requested operation; ordinary password input is not written to a password database. To let you retrieve the full preset passphrase after an interruption, the app stores it encrypted in its pending-operation record, protected by a key held in Android Keystore. This record remains until you resolve the pending result or undo the operation.</li>
+        <li><strong>Temporary files:</strong> File processing and verification can create temporary archives, including plaintext copies, in the app's private cache. The app attempts to remove these when processing ends and removes leftover KeyDog cache files at startup. An interruption may leave temporary files until cleanup occurs.</li>
+        <li><strong>Operation records and preferences:</strong> Pending-operation records can include document locations, relative paths, sizes, hashes, created outputs and key references. These support integrity verification, undo and safe handling of interrupted operations. Records are removed when the operation is resolved. Preferences, such as your choice to hide the preset-passphrase warning, remain locally until changed or app data is cleared.</li>
     </ul>
+    <p>Android automatic app backup is disabled in the current app. Files you save or export outside private app storage may still be backed up or synchronized by your device or document provider.</p>
 
-    <h2>4. Third-Party Services</h2>
-    <p>The app integrates Google Play Services strictly for billing and licensing management. We do not use third-party analytics trackers, advertising SDKs, or data brokers. Please refer to Google's Privacy Policy regarding how payment transaction details are handled.</p>
+    <h2>4. Export, sharing and the clipboard</h2>
+    <p>When you export keys, copies are written to the destination you choose. When you share keys, Android grants the receiving app temporary read access to the selected files. That app or service controls how it subsequently stores or transfers them. We cannot remove copies already exported, shared or backed up.</p>
+    <p>If you choose to copy a full preset passphrase, it is placed on the Android clipboard. Access and retention depend on Android and your device's clipboard features, including any enabled synchronization. Treat copied passphrases as sensitive and clear them when no longer needed.</p>
 
-    <h2>5. Changes to This Privacy Policy</h2>
-    <p>We may update our Privacy Policy from time to time. Any changes will be posted directly on this page with an updated revision date.</p>
+    <h2>5. Retention, deletion and recovery</h2>
+    <p>After encryption and verification, you can keep the original files, request their deletion, or undo encryption. Undo attempts to delete this operation's generated encrypted files and app-stored keys while retaining the originals. After a successful restore and verification, the app attempts to delete the encrypted input and corresponding keys, including selected external keys where deletion is permitted. Missing provider permissions or an interrupted operation can prevent cleanup; check any reported cleanup issue.</p>
+    <p>You can delete app-stored keys through key management. Clearing app data or uninstalling removes private app data, including stored keys and pending records. Outputs, exported keys, shared copies, and cloud-provider copies outside private app storage are not removed by uninstalling. Manage those through their respective storage provider or receiving service.</p>
+    <p>Deletion is ordinary file deletion and does not guarantee secure erasure of flash storage, provider trash, backups or synchronized copies. Before deleting keys or clearing app data, make sure you have the password or enough independently saved key shares needed to recover your files.</p>
+    <p>We do not hold a server-side recovery copy of your passwords or keys. If the required secret or enough key shares are lost, we cannot recover them for you. Preset-passphrase mode deliberately permits local candidate searching: with an empty original password, another person using the same public presets and rules can also recover the file. A short original password can also be guessed. This mode does not provide the same protection as a strong private password or securely held keys.</p>
 
-    <h2>6. Contact Us</h2>
-    <p>If you have any questions or feedback regarding this Privacy Policy, please contact us at: kong5664246@gmail.com</p>
+    <h2>6. Third parties, payments and support</h2>
+    <p>The current app does not integrate Google Play Billing, subscriptions, advertising or online license checks. Its bundled cryptographic library runs locally and does not act as a data-collection service. Android document providers, apps you choose for sharing, and the Google Play store itself have their own data practices.</p>
+    <p>If you contact us by email, we receive the address, message and any attachments you choose to send. We use them to respond and handle your support request, retaining correspondence only as needed for that purpose or applicable legal requirements. Our email provider processes that correspondence as part of delivering and storing email. Do not send passwords, private keys or sensitive file contents. You may request deletion of support correspondence at the contact address below, subject to any required retention.</p>
+
+    <h2>7. Changes to this policy</h2>
+    <p>We will update this page and its revision date when our data practices change. If a future version adds advertising, payments, network services or other data processing, we will describe the actual practices and provide any required notices and choices before that processing begins. Those features are not present in the current version.</p>
+
+    <h2>8. Contact us</h2>
+    <p>For privacy questions or support-data deletion requests, contact KongQBin (once512) at <a href="mailto:kong5664246@gmail.com">kong5664246@gmail.com</a>.</p>
+</main>
 </body>
 </html>
