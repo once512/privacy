@@ -1,7 +1,7 @@
 # App policies and terms
 
 - [Common Terms of Service / 公共服务条款](terms.html): shared English and Simplified Chinese terms for KeyDog and PureRec, with app-specific sections.
-- [KeyDog / 密钥狗](keydog-index.html): policy for KeyDog 1.1.0, including Google ads, consent, Billing and local Pro/usage records; last updated November 7, 2026.
+- [KeyDog / 密钥狗](keydog-index.html): policy for KeyDog 1.1.6, including Google ads, consent, Billing and local Pro/usage records; last updated November 7, 2026.
 - [PureRec](purerec-index.html): separate policy for PureRec.
 
 The KeyDog policy describes the current app implementation. Review it and the Play Console Data safety declarations whenever file handling, permissions or third-party SDKs change, especially before adding advertising or billing.
