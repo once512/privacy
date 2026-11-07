@@ -1,7 +1,7 @@
 # App policies and terms
 
 - [Common Terms of Service / 公共服务条款](terms.html): shared English and Simplified Chinese terms for KeyDog and PureRec, with app-specific sections.
-- [KeyDog / 密钥狗](keydog-index.html): policy for KeyDog 1.1.6, including Google ads, consent, Billing and local Pro/usage records; last updated November 7, 2026.
+- [KeyDog / 密钥狗](keydog-index.html): policy for KeyDog 1.1.14 (19), including Google ads, consent, Billing and local Pro/usage records; last updated November 8, 2026.
 - [PureRec](purerec-index.html): separate policy for PureRec.
 
 The KeyDog policy describes the current app implementation. Review it and the Play Console Data safety declarations whenever file handling, permissions or third-party SDKs change, especially before adding advertising or billing.
@@ -24,3 +24,7 @@ References: [Google Play trader status declaration](https://support.google.com/g
 The PureRec privacy policy is now bilingual (English / Simplified Chinese) and covers the current AdMob/GMA, UMP and Play Billing implementation, local audio and calibration metadata, exports, retention/deletion, support and privacy choices. The common terms retain their existing consumer protections and KeyDog-specific text; new PureRec-only terms cover monthly renewal, one-time purchases, restoring access, the 24-hour subscription verification cache, 30-minute local rewarded access and experimental processing limits.
 
 Checked against PureRec develop 4f3da3b and Google’s mobile ads data disclosure and subscription cancellation guidance. HTML nesting, language sections and local links were checked. Contact details remain as previously supplied: kong5664246@gmail.com. Store identity, contact mailbox operation, regional consent messages, target-audience declarations and Play Data safety answers must reflect the actual distribution configuration; this edit does not modify those consoles or verify legal compliance in every jurisdiction. No KeyDog implementation review was performed. Publishing and checking the live URLs is a separate step.
+
+## KeyDog policy review — November 8, 2026
+
+Updated KeyDog privacy and both language versions of the KeyDog-specific terms for 1.1.14 (19): Dog/share terminology, release as deletion, separate management and internal selection, independent shares and backups, local warning preferences, recovery cleanup and monthly renewal versus one-time purchase. Rechecked current Google Mobile Ads 25.5.0 data disclosure and Google Play cancellation guidance. PureRec-specific sections and its separate privacy policy are unchanged. Cosmetic home animation changes introduce no additional data processing.
