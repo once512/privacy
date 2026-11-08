@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ZipFox Privacy Policy in English and Simplified Chinese: local archive processing, storage permissions, Google advertising and purchases.">
+    <title>Privacy Policy - ZipFox</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.7; padding: 24px; max-width: 860px; margin: 0 auto; color: #333; overflow-wrap: anywhere; }
+        h1, h2 { color: #111; line-height: 1.35; }
+        h2 { margin-top: 32px; }
+        a { color: #185abc; }
+        nav { padding: 14px 18px; background: #f3f5f8; border-radius: 8px; }
+        ul { padding-left: 22px; }
+        section + section { border-top: 1px solid #ddd; margin-top: 40px; padding-top: 20px; }
+    </style>
+</head>
+<body>
+<main>
+    <h1>ZipFox Privacy Policy / ZipFox 隐私政策</h1>
+    <p>Last updated: <time datetime="2026-11-08">November 8, 2026 / 2026年11月8日</time></p>
+    <nav aria-label="Language and terms"><a href="#english">English</a> · <a href="#chinese" lang="zh-CN">简体中文</a> · <a href="terms.html#zipfox">Terms of Service / 服务条款</a></nav>
+
+    <section id="english" lang="en" aria-labelledby="english-title">
+        <h2 id="english-title">Privacy Policy</h2>
+        <p>This policy describes ZipFox for Android, application ID <code>app.zipfox</code>, version 0.1.0 (1), provided by KongQBin (GitHub: once512, “we” or “us”). Contact: <a href="mailto:kong5664246@gmail.com">kong5664246@gmail.com</a>.</p>
+
+        <h2>1. What ZipFox does</h2>
+        <p>ZipFox creates and extracts archives on your device. It does not require a ZipFox account. Our file-processing code does not upload selected files, archive contents, filenames, paths or passwords to us or to advertising services. We do not operate a file-storage or purchase-verification backend for this version. Google advertising, privacy-choice and purchase services can communicate over the network; local file processing does not mean the entire app is network-free.</p>
+        <p>This version includes Google Mobile Ads 25.5.0, User Messaging Platform (UMP) 4.0.0 and Google Play Billing 9.1.0. Debug builds use official test ads. Production ads and paid products depend on release configuration and availability; an unconfigured purchase entry does not take payment.</p>
+
+        <h2>2. Storage and other permissions</h2>
+        <ul>
+            <li><strong>Files:</strong> Android 11 and later use “All files access” (<code>MANAGE_EXTERNAL_STORAGE</code>) to browse shared storage, select files and folders, read archives and volumes, create outputs and perform deletion or cleanup you request. This grants broad storage access, beyond a single selected file, subject to Android restrictions. Android 8–10 use read/write storage permissions. You can revoke access in Android settings; file operations requiring it will then be unavailable.</li>
+            <li><strong>Foreground service and notifications:</strong> These support an ongoing archive task, progress, cancellation and completion/error notices. Notifications may include an output name or an error containing a path; visibility on a lock screen depends on your device settings. Notification permission can be managed separately in Android settings.</li>
+            <li><strong>Network and Google services:</strong> Internet/network-state access supports ads, privacy choices and purchases. The merged SDK manifest also includes Billing, advertising-ID, Android advertising-service and wake-lock permissions. ZipFox does not request microphone, camera, contacts or runtime location permissions. IP-based approximate location does not require a location permission.</li>
+        </ul>
+        <p>The current file browser accesses device storage directly; cloud document providers through Android's Storage Access Framework are not integrated. A destination independently backed up or synchronized by another app or device service remains subject to that service's settings and privacy policy.</p>
+
+        <h2>3. Information handled on your device</h2>
+        <ul>
+            <li><strong>Files and metadata:</strong> Processing reads selected content, filenames, directory structure, sizes and timestamps and writes archives or extracted files to your chosen location. Archives can contain filenames and other metadata. Password-protected ZIP does not hide entry names; password-protected 7Z also encrypts archive headers. Output names remain visible in storage.</li>
+            <li><strong>Passwords:</strong> Passwords are used in memory for the requested operation, are not deliberately saved to preferences, activity saved state or service Intents, and are not sent to us. Task character buffers are cleared when processing ends, but this is not a guarantee that every runtime or library copy is immediately erased. We have no password recovery copy.</li>
+            <li><strong>Task and interface state:</strong> File paths, output location/name, format and compression level may be kept in Android activity state to restore the screen. In-memory progress and results support the current task. This version does not provide automatic task recovery after process termination.</li>
+            <li><strong>Local preferences and access records:</strong> The app saves separate source-deletion and failure-cleanup settings for compression/extraction, the extraction top-level-folder setting, dismissed warnings, the local allowance date, successful task counts, unused reward credits, reward identifiers used to avoid duplicate credit, and the last Pro-verification time and cached validity deadline. These support settings, quotas and purchase access; the app does not send its local quota records to a developer server.</li>
+        </ul>
+        <p>ZipFox disables Android automatic app backup and excludes its app data from the configured cloud-backup and device-transfer rules. This does not prevent independent backup or synchronization of files in shared storage.</p>
+
+        <h2>4. Temporary files, deletion and retention</h2>
+        <p>Processing creates <code>.zipfox-*</code> working directories in the output location. They can contain plaintext extracted files, intermediate archives and backups of files being replaced. They are not a secure vault. Successful operations attempt cleanup. “Clean process files on failure” defaults to on; turning it off preserves working files after failure or cancellation. A crash, force-stop, power loss or unsuccessful rollback may leave files behind. When rollback fails, recovery backups may be retained even if cleanup is enabled; check the reported path before deleting anything.</p>
+        <p>“Delete source files after success” defaults to off and is saved separately for each mode. If enabled, the app checks the completed output and source snapshot before attempting ordinary source deletion; changed or inaccessible sources may remain. Extraction can replace same-name regular files in the destination. Review the result and warnings and keep independent backups.</p>
+        <p>Source files, outputs and retained working files remain in their storage location until you or another authorized process removes them. Clearing app data or uninstalling removes private preferences and local access records, but does not automatically remove files or working directories in shared storage. Revoke storage permissions through Android settings and manage remaining files with a file manager. Ordinary deletion does not guarantee secure erasure from flash storage, backups or synchronized copies.</p>
+
+        <h2>5. Advertising and privacy choices</h2>
+        <p>Non-Pro users may see native video ads and may choose a rewarded ad for one additional compression or extraction opportunity. Google Mobile Ads collects and shares IP addresses, device/account identifiers, product interactions and diagnostic information for ads, analytics and fraud prevention. IP addresses can indicate approximate location. Google states SDK data in transit is protected with TLS. This SDK disclosure is separate from ZipFox's local file processing.</p>
+        <p>Production ad initialization is gated by UMP's ad-request decision after updating consent information and showing a form where required. An “Advertising privacy settings” entry appears in the Pro dialog when UMP requires it. You can also use Android advertising-ID controls and <a href="https://myadcenter.google.com/">Google's ad controls</a>. Available choices and personalization depend on region, settings and consent. Declining an optional ad choice does not itself remove your free daily file-processing allowance. Active Pro hides ad placements and stops new native/rewarded ad loading; billing and privacy-service communication may still occur.</p>
+        <p>See the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google Mobile Ads data disclosure</a> for Google's handling and account controls.</p>
+
+        <h2>6. Purchases and local access records</h2>
+        <p>Where configured and offered, monthly Pro renews automatically and permanent Pro is a one-time purchase for ZipFox. Google Play handles payment and account information. The app receives product details, purchase tokens, signed purchase records and transaction/acknowledgment states to validate, acknowledge and restore access. We do not receive your card number or billing address through the app. The current implementation verifies purchase signatures on the device without a developer-operated verification backend.</p>
+        <p>The app stores a verified Pro flag as timestamps for up to 24 hours of offline use and queries ownership again through Play. Pending payments do not activate access. Daily successful-use counts and rewarded credits are device-local; clearing data or uninstalling can remove them. Valid paid purchases can be restored through the same Google Play account, subject to successful verification.</p>
+        <p>Manage renewal in <a href="https://play.google.com/store/account/subscriptions">Google Play subscriptions</a>. Uninstalling or buying permanent Pro does not cancel an existing monthly subscription. Google-held purchase and advertising records follow Google's retention rules and account controls; clearing ZipFox data does not delete them.</p>
+
+        <h2>7. Support, sharing and international processing</h2>
+        <p>If you email us, we receive your email address, message and any attachments you choose to send. We use them to answer your request and investigate the issue, and retain them only as needed for that purpose or applicable legal obligations. Avoid sending passwords or confidential files. You can request deletion of support correspondence; any legally required retention will be explained.</p>
+        <p>We do not sell your selected files or provide them to advertisers. Google processes SDK and payment data under its own policies and may process it in countries outside yours. Support email is handled by the email provider under its policy. We may disclose support information where legally required or necessary to protect legal rights, subject to applicable law. These statements do not replace any separate consent or safeguards required for a particular transfer.</p>
+
+        <h2>8. Your choices, children and updates</h2>
+        <p>You can manage permissions, remove local files, clear app data, manage Google privacy settings and contact us about access, correction, deletion, restriction, objection, portability or withdrawal of consent where applicable. We cannot access or erase files held only on your device remotely. We will explain any limits on a request; you may also contact your competent data-protection authority where available.</p>
+        <p>ZipFox is a general file utility and is not specifically directed to children. We do not ask for age or operate child accounts. If you believe a child has supplied personal information to us, contact us so we can investigate and take appropriate action.</p>
+        <p>We will update this policy when practices change and revise the date above. Material changes will be communicated through an appropriate channel, with any notice or consent required by law. Questions and privacy requests: <a href="mailto:kong5664246@gmail.com">kong5664246@gmail.com</a>.</p>
+    </section>
+
+    <section id="chinese" lang="zh-CN" aria-labelledby="chinese-title">
+        <h2 id="chinese-title">隐私政策</h2>
+        <p>本政策适用于 KongQBin（GitHub：once512，以下简称“我们”）提供的 Android 应用 ZipFox，应用 ID 为 <code>app.zipfox</code>，版本 0.1.0（1）。联系邮箱：<a href="mailto:kong5664246@gmail.com">kong5664246@gmail.com</a>。</p>
+
+        <h2>1. 应用功能与数据处理概况</h2>
+        <p>ZipFox 在您的设备上创建和解压归档文件，无需注册 ZipFox 账户。我们的文件处理代码不会向我们或广告服务上传您选择的文件、压缩包内容、文件名、路径或密码。当前版本没有开发者运营的文件存储或购买验证后端。Google 广告、隐私选项和购买服务可能联网，本地处理文件不意味着整个应用不联网。</p>
+        <p>本版本接入 Google Mobile Ads 25.5.0、User Messaging Platform（UMP）4.0.0 和 Google Play Billing 9.1.0。Debug 版本使用官方测试广告。正式广告与付费商品是否可用取决于发布配置；未配置的购买入口不会收款。</p>
+
+        <h2>2. 存储及其他权限</h2>
+        <ul>
+            <li><strong>文件访问：</strong>Android 11 及以上通过“所有文件访问权限”（<code>MANAGE_EXTERNAL_STORAGE</code>）浏览共享存储、选择文件与文件夹、读取归档及分卷、创建输出，并执行您要求的删除或清理。这是超出单个所选文件的广泛存储权限，仍受 Android 系统限制。Android 8–10 使用存储读写权限。您可在系统设置撤回授权，相关文件操作将无法继续使用。</li>
+            <li><strong>前台服务与通知：</strong>用于持续执行归档任务、显示进度、取消任务以及完成或错误通知。通知可能包含输出名称或带路径的错误信息；锁屏可见性取决于设备设置。通知权限可在系统设置中单独管理。</li>
+            <li><strong>网络与 Google 服务：</strong>互联网和网络状态权限用于广告、隐私选项及购买。SDK 合并清单还包含支付、广告标识符、Android 广告服务及唤醒锁权限。ZipFox 不申请麦克风、相机、通讯录或运行时位置权限。通过 IP 推断大致位置不需要位置权限。</li>
+        </ul>
+        <p>当前文件浏览器直接访问设备存储，尚未接入 Android 存储访问框架中的云端文档提供方。其他应用或设备服务自行备份、同步的存储位置，仍适用相应服务的设置与隐私政策。</p>
+
+        <h2>3. 在设备上处理的信息</h2>
+        <ul>
+            <li><strong>文件和元数据：</strong>处理时读取所选内容、文件名、目录结构、大小及时间信息，并向您指定的位置写入压缩包或解压文件。归档可能包含文件名等元数据。加密 ZIP 不隐藏包内条目名称；加密 7Z 同时加密归档头。输出文件名在存储中仍可见。</li>
+            <li><strong>密码：</strong>密码在内存中用于当前操作，不主动保存到偏好设置、Activity 保存状态或服务 Intent，也不发送给我们。任务结束时清空任务字符缓冲区，但不保证运行时或第三方库的每个副本均立即擦除。我们没有密码恢复副本。</li>
+            <li><strong>任务与界面状态：</strong>文件路径、输出位置与名称、格式及压缩等级可能保存在 Android Activity 状态中，用于恢复界面；内存中的进度和结果用于当前任务。当前版本不会在进程终止后自动恢复任务。</li>
+            <li><strong>本地设置与权益记录：</strong>保存压缩与解压各自的源文件删除、失败清理选项，解压顶层目录选项，已关闭的提示，本地额度日期、成功任务次数、未使用的奖励次数、防止重复发奖的奖励标识，以及 Pro 最近验证时间和缓存有效截止时间。这些信息用于设置、额度和购买权益；应用不会将本地额度记录发送到开发者服务器。</li>
+        </ul>
+        <p>ZipFox 关闭 Android 应用自动备份，并通过当前配置的云备份和设备迁移规则排除应用数据。这不阻止共享存储中文件被其他服务独立备份或同步。</p>
+
+        <h2>4. 过程文件、删除与保存期限</h2>
+        <p>处理会在输出位置创建 <code>.zipfox-*</code> 过程目录，其中可能包含明文解压内容、中间归档及被替换文件的备份。这些目录不是安全保险箱。成功后尝试清理；“失败时清理过程文件”默认开启，关闭后失败或取消会保留过程文件。崩溃、强制停止、断电或回滚失败可能留下文件。回滚失败时，即使开启清理也可能保留恢复备份；删除前请核对提示的路径。</p>
+        <p>“成功后删除源文件”默认关闭，压缩和解压分别保存选择。开启后，应用检查完成的输出和源文件快照，再尝试普通删除；发生变化或无法访问的源文件可能保留。解压可能覆盖输出位置的同名普通文件。请查看结果与警告并保留独立备份。</p>
+        <p>源文件、输出及保留的过程文件留在相应位置，直到您或其他有权进程删除。清除应用数据或卸载会移除私有设置及本地权益记录，但不会自动删除共享存储中的文件和过程目录。您可通过系统设置撤回存储授权，通过文件管理器处理剩余文件。普通删除不保证擦除闪存、备份或同步副本中的所有数据。</p>
+
+        <h2>5. 广告与隐私选项</h2>
+        <p>非 Pro 用户可能看到原生视频广告，也可自愿观看激励广告获取一次额外压缩或解压机会。Google Mobile Ads 为广告、分析及反欺诈收集和共享 IP 地址、设备或账户标识符、产品交互及诊断信息；IP 地址可反映大致位置。Google 说明 SDK 传输数据使用 TLS 保护。这些 SDK 数据处理与 ZipFox 的本地文件处理分别进行。</p>
+        <p>正式广告初始化会先更新 UMP 同意信息、按需展示表单，并以 UMP 是否允许请求广告的结果为准。UMP 要求时，Pro 弹窗会显示“广告隐私设置”入口。您也可以使用 Android 广告标识符设置及 <a href="https://myadcenter.google.com/">Google 广告设置</a>。可用选项及广告个性化取决于地区、设置与同意状态。拒绝可选广告同意本身不会取消每日免费文件处理额度。Pro 有效时隐藏广告位并停止新的原生／激励广告加载，但支付与隐私服务仍可能联网。</p>
+        <p>Google 的处理方式与账户控制详见 <a href="https://policies.google.com/privacy">Google 隐私政策</a>及 <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google Mobile Ads 数据披露</a>。</p>
+
+        <h2>6. 购买与本地权益记录</h2>
+        <p>在已配置并实际销售时，Pro 月订阅自动续订，永久 Pro 为 ZipFox 的一次性购买。付款与账户信息由 Google Play 处理。应用接收商品详情、购买令牌、签名购买记录及交易／确认状态，用于验证、确认和恢复权益；应用不会向我们提供您的银行卡号或账单地址。当前实现在设备上验证购买签名，没有开发者运营的验证后端。</p>
+        <p>应用以时间戳保存已验证的 Pro 状态，支持最长 24 小时离线缓存，并通过 Play 重新查询购买。待支付状态不激活权益。每日成功次数和奖励次数仅保存在本机，清除数据或卸载可能将其移除。有效付费购买可通过同一 Google Play 账户恢复，需成功验证。</p>
+        <p>请在 <a href="https://play.google.com/store/account/subscriptions">Google Play 订阅设置</a>中管理续订。卸载或购买永久 Pro 不会取消现有月订阅。Google 持有的购买与广告记录适用其保存规则及账户控制，清除 ZipFox 数据不会删除这些记录。</p>
+
+        <h2>7. 支持、信息共享与跨境处理</h2>
+        <p>您发送邮件时，我们会收到您的邮箱地址、正文及主动附上的附件，仅用于回复、排查问题，并在处理所需或法律要求的期限内保存。请勿发送密码或机密文件。您可要求删除支持邮件；如依法需保留，我们会说明。</p>
+        <p>我们不出售您选择的文件，也不向广告商提供这些文件。Google 按其政策处理 SDK 和支付数据，处理地点可能位于您所在国家或地区之外。支持邮件由邮箱服务商按其政策处理。我们可能在法律要求或保护合法权利所必需时，依法披露支持信息。这些说明不替代特定数据传输依法所需的单独同意或保障措施。</p>
+
+        <h2>8. 您的选择、儿童与政策更新</h2>
+        <p>您可管理权限、删除本地文件、清除应用数据、管理 Google 隐私设置，并就适用的访问、更正、删除、限制处理、反对、可携带或撤回同意等权利联系我们。我们无法远程访问或删除仅保存在您设备上的文件。如请求受到限制，我们会解释原因；在适用情况下，您也可向有管辖权的数据保护机构投诉。</p>
+        <p>ZipFox 为通用文件工具，并非专门面向儿童，不询问年龄或运营儿童账户。如您认为儿童已向我们提供个人信息，请联系我们，以便核查并采取适当措施。</p>
+        <p>数据处理方式变化时，我们会更新本政策及日期。重大变化将通过适当渠道通知，并依法提供所需告知或征求同意。问题与隐私请求请发送至 <a href="mailto:kong5664246@gmail.com">kong5664246@gmail.com</a>。</p>
+    </section>
+</main>
+</body>
+</html>

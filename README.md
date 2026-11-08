@@ -1,8 +1,10 @@
 # App policies and terms
 
-- [Common Terms of Service / 公共服务条款](terms.html): shared English and Simplified Chinese terms for KeyDog and PureRec, with app-specific sections.
+- [Common Terms of Service / 公共服务条款](terms.html): shared English and Simplified Chinese terms for KeyDog, PureRec and ZipFox, with app-specific sections.
 - [KeyDog / 密钥狗](keydog-index.html): policy for KeyDog 1.1.14 (19), including Google ads, consent, Billing and local Pro/usage records; last updated November 8, 2026.
 - [PureRec](purerec-index.html): separate policy for PureRec.
+- [ZipFox](zipfox-index.html): bilingual policy for ZipFox 0.1.0 (1), covering local archives, working files, broad storage access, Google ads, privacy choices and Play Billing; last updated November 8, 2026.
+- [ZipFox review / 信息收集与核查记录](zipfox-review.md): implementation evidence, official sources and release items to verify.
 
 The KeyDog policy describes the current app implementation. Review it and the Play Console Data safety declarations whenever file handling, permissions or third-party SDKs change, especially before adding advertising or billing.
 
