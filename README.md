@@ -1,7 +1,7 @@
 # App policies and terms
 
 - [Common Terms of Service / 公共服务条款](terms.html): shared English and Simplified Chinese terms for KeyDog, PureRec and ZipFox, with app-specific sections.
-- [KeyDog / 密钥狗](keydog-index.html): policy for KeyDog 1.2.0 (21), including Google ads, consent, Billing and local Pro/usage records; last updated November 9, 2026.
+- [KeyDog / 密钥狗](keydog-index.html): policy for KeyDog 1.2.2 (23), including Google ads, consent, Billing and local Pro/usage records; last updated November 9, 2026.
 - [PureRec](purerec-index.html): separate policy for PureRec.
 - [ZipFox](zipfox-index.html): bilingual policy for ZipFox 0.1.0 (1), covering local archives, working files, broad storage access, Google ads, privacy choices and Play Billing; last updated November 9, 2026.
 - [ZipFox review / 信息收集与核查记录](zipfox-review.md): implementation evidence, official sources and release items to verify.
@@ -34,3 +34,7 @@ Updated KeyDog privacy and both language versions of the KeyDog-specific terms f
 ## KeyDog reward update — November 9, 2026
 
 KeyDog 1.2.0 replaces thirty-minute rewarded Pro with one operation-specific ad credit, reset each Monday using the device’s local calendar. Updated local storage, retention and both KeyDog terms sections. The old timer no longer activates Pro. PureRec still uses its own thirty-minute reward policy; its sections are unchanged.
+
+## KeyDog free feature access — November 9, 2026
+
+KeyDog 1.2.2 removes the Pro gate from direct and batch Dog-file sharing. Free users have access to encryption/recovery features within their usage allowance; sharing and export consume no task uses. Paid Pro retains unlimited tasks and no native ads. Updated KeyDog privacy and both language versions of its terms; PureRec-specific sections are unchanged.
