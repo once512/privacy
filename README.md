@@ -1,9 +1,9 @@
 # App policies and terms
 
 - [Common Terms of Service / 公共服务条款](terms.html): shared English and Simplified Chinese terms for KeyDog, PureRec and ZipFox, with app-specific sections.
-- [KeyDog / 密钥狗](keydog-index.html): policy for KeyDog 1.1.14 (19), including Google ads, consent, Billing and local Pro/usage records; last updated November 8, 2026.
+- [KeyDog / 密钥狗](keydog-index.html): policy for KeyDog 1.2.0 (21), including Google ads, consent, Billing and local Pro/usage records; last updated November 9, 2026.
 - [PureRec](purerec-index.html): separate policy for PureRec.
-- [ZipFox](zipfox-index.html): bilingual policy for ZipFox 0.1.0 (1), covering local archives, working files, broad storage access, Google ads, privacy choices and Play Billing; last updated November 8, 2026.
+- [ZipFox](zipfox-index.html): bilingual policy for ZipFox 0.1.0 (1), covering local archives, working files, broad storage access, Google ads, privacy choices and Play Billing; last updated November 9, 2026.
 - [ZipFox review / 信息收集与核查记录](zipfox-review.md): implementation evidence, official sources and release items to verify.
 
 The KeyDog policy describes the current app implementation. Review it and the Play Console Data safety declarations whenever file handling, permissions or third-party SDKs change, especially before adding advertising or billing.
@@ -30,3 +30,7 @@ Checked against PureRec develop 4f3da3b and Google’s mobile ads data disclosur
 ## KeyDog policy review — November 8, 2026
 
 Updated KeyDog privacy and both language versions of the KeyDog-specific terms for 1.1.14 (19): Dog/share terminology, release as deletion, separate management and internal selection, independent shares and backups, local warning preferences, recovery cleanup and monthly renewal versus one-time purchase. Rechecked current Google Mobile Ads 25.5.0 data disclosure and Google Play cancellation guidance. PureRec-specific sections and its separate privacy policy are unchanged. Cosmetic home animation changes introduce no additional data processing.
+
+## KeyDog reward update — November 9, 2026
+
+KeyDog 1.2.0 replaces thirty-minute rewarded Pro with one operation-specific ad credit, reset each Monday using the device’s local calendar. Updated local storage, retention and both KeyDog terms sections. The old timer no longer activates Pro. PureRec still uses its own thirty-minute reward policy; its sections are unchanged.
