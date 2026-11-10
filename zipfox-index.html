@@ -18,16 +18,16 @@
 <body>
 <main>
     <h1>ZipFox Privacy Policy / ZipFox 隐私政策</h1>
-    <p>Last updated: <time datetime="2026-11-08">November 8, 2026 / 2026年11月8日</time></p>
+    <p>Last updated: <time datetime="2026-11-10">November 10, 2026 / 2026年11月10日</time></p>
     <nav aria-label="Language and terms"><a href="#english">English</a> · <a href="#chinese" lang="zh-CN">简体中文</a> · <a href="terms.html#zipfox">Terms of Service / 服务条款</a></nav>
 
     <section id="english" lang="en" aria-labelledby="english-title">
         <h2 id="english-title">Privacy Policy</h2>
-        <p>This policy describes ZipFox for Android, application ID <code>app.zipfox</code>, version 0.1.0 (1), provided by KongQBin (GitHub: once512, “we” or “us”). Contact: <a href="mailto:kong5664246@gmail.com">kong5664246@gmail.com</a>.</p>
+        <p>This policy describes ZipFox for Android, application ID <code>app.zipfox</code>, version 0.1.5 (6), provided by KongQBin (GitHub: once512, “we” or “us”). Contact: <a href="mailto:kong5664246@gmail.com">kong5664246@gmail.com</a>.</p>
 
         <h2>1. What ZipFox does</h2>
         <p>ZipFox creates and extracts archives on your device. It does not require a ZipFox account. Our file-processing code does not upload selected files, archive contents, filenames, paths or passwords to us or to advertising services. We do not operate a file-storage or purchase-verification backend for this version. Google advertising, privacy-choice and purchase services can communicate over the network; local file processing does not mean the entire app is network-free.</p>
-        <p>This version includes Google Mobile Ads 25.5.0, User Messaging Platform (UMP) 4.0.0 and Google Play Billing 9.1.0. Debug builds use official test ads. Production ads and paid products depend on release configuration and availability; an unconfigured purchase entry does not take payment.</p>
+        <p>This version includes Google Mobile Ads 25.5.0, User Messaging Platform (UMP) 4.0.0 and Google Play Billing 9.1.0. Debug builds use official test ads. Release builds support separately configured native ad placements for compression and extraction, rewarded ads, and Google Play products. Actual ads and purchases depend on platform configuration and availability; an unavailable purchase does not grant access or simulate payment.</p>
 
         <h2>2. Storage and other permissions</h2>
         <ul>
@@ -42,7 +42,7 @@
             <li><strong>Files and metadata:</strong> Processing reads selected content, filenames, directory structure, sizes and timestamps and writes archives or extracted files to your chosen location. Archives can contain filenames and other metadata. Password-protected ZIP does not hide entry names; password-protected 7Z also encrypts archive headers. Output names remain visible in storage.</li>
             <li><strong>Passwords:</strong> Passwords are used in memory for the requested operation, are not deliberately saved to preferences, activity saved state or service Intents, and are not sent to us. Task character buffers are cleared when processing ends, but this is not a guarantee that every runtime or library copy is immediately erased. We have no password recovery copy.</li>
             <li><strong>Task and interface state:</strong> File paths, output location/name, format and compression level may be kept in Android activity state to restore the screen. In-memory progress and results support the current task. This version does not provide automatic task recovery after process termination.</li>
-            <li><strong>Local preferences and access records:</strong> The app saves separate source-deletion and failure-cleanup settings for compression/extraction, the extraction top-level-folder setting, dismissed warnings, the local allowance date, successful task counts, unused reward credits, reward identifiers used to avoid duplicate credit, and the last Pro-verification time and cached validity deadline. These support settings, quotas and purchase access; the app does not send its local quota records to a developer server.</li>
+            <li><strong>Local preferences and access records:</strong> The app saves separate source-deletion and failure-cleanup settings for compression/extraction, the extraction top-level-folder setting, dismissed warnings, the local allowance date, successful task counts, unused reward credits and their weekly reset boundary, reward identifiers used to avoid duplicate credit, and the last Pro-verification time and cached validity deadline. These support settings, quotas and purchase access; the app does not send its local quota records to a developer server.</li>
         </ul>
         <p>ZipFox disables Android automatic app backup and excludes its app data from the configured cloud-backup and device-transfer rules. This does not prevent independent backup or synchronization of files in shared storage.</p>
 
@@ -58,7 +58,7 @@
 
         <h2>6. Purchases and local access records</h2>
         <p>Where configured and offered, monthly Pro renews automatically and permanent Pro is a one-time purchase for ZipFox. Google Play handles payment and account information. The app receives product details, purchase tokens, signed purchase records and transaction/acknowledgment states to validate, acknowledge and restore access. We do not receive your card number or billing address through the app. The current implementation verifies purchase signatures on the device without a developer-operated verification backend.</p>
-        <p>The app stores a verified Pro flag as timestamps for up to 24 hours of offline use and queries ownership again through Play. Pending payments do not activate access. Daily successful-use counts and rewarded credits are device-local; clearing data or uninstalling can remove them. Valid paid purchases can be restored through the same Google Play account, subject to successful verification.</p>
+        <p>The app stores a verified Pro flag as timestamps for up to 24 hours of offline use and queries ownership again through Play. Pending payments do not activate access. Free access permits three successful compression tasks and three successful extraction tasks per device-local calendar day; failed or cancelled tasks do not consume a use. Daily free uses are consumed before rewarded credits. Credits remain usable across days within the same week and expire at Monday 00:00 according to the device local calendar; expiry is applied when the app next checks the balance. Turning the clock back does not restore expired credits. Daily counts and credits are device-local; clearing data or uninstalling can remove them. Valid paid purchases can be restored through the same Google Play account, subject to successful verification.</p>
         <p>Manage renewal in <a href="https://play.google.com/store/account/subscriptions">Google Play subscriptions</a>. Uninstalling or buying permanent Pro does not cancel an existing monthly subscription. Google-held purchase and advertising records follow Google's retention rules and account controls; clearing ZipFox data does not delete them.</p>
 
         <h2>7. Support, sharing and international processing</h2>
@@ -73,11 +73,11 @@
 
     <section id="chinese" lang="zh-CN" aria-labelledby="chinese-title">
         <h2 id="chinese-title">隐私政策</h2>
-        <p>本政策适用于 KongQBin（GitHub：once512，以下简称“我们”）提供的 Android 应用 ZipFox，应用 ID 为 <code>app.zipfox</code>，版本 0.1.0（1）。联系邮箱：<a href="mailto:kong5664246@gmail.com">kong5664246@gmail.com</a>。</p>
+        <p>本政策适用于 KongQBin（GitHub：once512，以下简称“我们”）提供的 Android 应用 ZipFox，应用 ID 为 <code>app.zipfox</code>，版本 0.1.5（6）。联系邮箱：<a href="mailto:kong5664246@gmail.com">kong5664246@gmail.com</a>。</p>
 
         <h2>1. 应用功能与数据处理概况</h2>
         <p>ZipFox 在您的设备上创建和解压归档文件，无需注册 ZipFox 账户。我们的文件处理代码不会向我们或广告服务上传您选择的文件、压缩包内容、文件名、路径或密码。当前版本没有开发者运营的文件存储或购买验证后端。Google 广告、隐私选项和购买服务可能联网，本地处理文件不意味着整个应用不联网。</p>
-        <p>本版本接入 Google Mobile Ads 25.5.0、User Messaging Platform（UMP）4.0.0 和 Google Play Billing 9.1.0。Debug 版本使用官方测试广告。正式广告与付费商品是否可用取决于发布配置；未配置的购买入口不会收款。</p>
+        <p>本版本接入 Google Mobile Ads 25.5.0、User Messaging Platform（UMP）4.0.0 和 Google Play Billing 9.1.0。Debug 版本使用官方测试广告。发布版支持分别配置压缩页与解压页原生广告、激励广告及 Google Play 商品。实际广告与购买取决于平台配置和可用性；不可用的购买不会授予权益或模拟支付。</p>
 
         <h2>2. 存储及其他权限</h2>
         <ul>
@@ -92,7 +92,7 @@
             <li><strong>文件和元数据：</strong>处理时读取所选内容、文件名、目录结构、大小及时间信息，并向您指定的位置写入压缩包或解压文件。归档可能包含文件名等元数据。加密 ZIP 不隐藏包内条目名称；加密 7Z 同时加密归档头。输出文件名在存储中仍可见。</li>
             <li><strong>密码：</strong>密码在内存中用于当前操作，不主动保存到偏好设置、Activity 保存状态或服务 Intent，也不发送给我们。任务结束时清空任务字符缓冲区，但不保证运行时或第三方库的每个副本均立即擦除。我们没有密码恢复副本。</li>
             <li><strong>任务与界面状态：</strong>文件路径、输出位置与名称、格式及压缩等级可能保存在 Android Activity 状态中，用于恢复界面；内存中的进度和结果用于当前任务。当前版本不会在进程终止后自动恢复任务。</li>
-            <li><strong>本地设置与权益记录：</strong>保存压缩与解压各自的源文件删除、失败清理选项，解压顶层目录选项，已关闭的提示，本地额度日期、成功任务次数、未使用的奖励次数、防止重复发奖的奖励标识，以及 Pro 最近验证时间和缓存有效截止时间。这些信息用于设置、额度和购买权益；应用不会将本地额度记录发送到开发者服务器。</li>
+            <li><strong>本地设置与权益记录：</strong>保存压缩与解压各自的源文件删除、失败清理选项，解压顶层目录选项，已关闭的提示，本地额度日期、成功任务次数、未使用的奖励次数及每周重置边界、防止重复发奖的奖励标识，以及 Pro 最近验证时间和缓存有效截止时间。这些信息用于设置、额度和购买权益；应用不会将本地额度记录发送到开发者服务器。</li>
         </ul>
         <p>ZipFox 关闭 Android 应用自动备份，并通过当前配置的云备份和设备迁移规则排除应用数据。这不阻止共享存储中文件被其他服务独立备份或同步。</p>
 
@@ -108,7 +108,7 @@
 
         <h2>6. 购买与本地权益记录</h2>
         <p>在已配置并实际销售时，Pro 月订阅自动续订，永久 Pro 为 ZipFox 的一次性购买。付款与账户信息由 Google Play 处理。应用接收商品详情、购买令牌、签名购买记录及交易／确认状态，用于验证、确认和恢复权益；应用不会向我们提供您的银行卡号或账单地址。当前实现在设备上验证购买签名，没有开发者运营的验证后端。</p>
-        <p>应用以时间戳保存已验证的 Pro 状态，支持最长 24 小时离线缓存，并通过 Play 重新查询购买。待支付状态不激活权益。每日成功次数和奖励次数仅保存在本机，清除数据或卸载可能将其移除。有效付费购买可通过同一 Google Play 账户恢复，需成功验证。</p>
+        <p>应用以时间戳保存已验证的 Pro 状态，支持最长 24 小时离线缓存，并通过 Play 重新查询购买。待支付状态不激活权益。免费额度按设备本地日历日每天可成功压缩、解压各 3 次，失败或取消不扣次；先使用每日免费次数，再使用奖励次数。奖励在同一周内可跨日使用，按设备本地日历于每周一 00:00 到期，应用下次检查余额时结算；回拨时钟不会恢复已过期奖励。每日次数与奖励仅保存在本机，清除数据或卸载可能将其移除。有效付费购买可通过同一 Google Play 账户恢复，需成功验证。</p>
         <p>请在 <a href="https://play.google.com/store/account/subscriptions">Google Play 订阅设置</a>中管理续订。卸载或购买永久 Pro 不会取消现有月订阅。Google 持有的购买与广告记录适用其保存规则及账户控制，清除 ZipFox 数据不会删除这些记录。</p>
 
         <h2>7. 支持、信息共享与跨境处理</h2>

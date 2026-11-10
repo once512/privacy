@@ -1,40 +1,39 @@
-# App policies and terms
+# 应用隐私政策与服务条款
 
-- [Common Terms of Service / 公共服务条款](terms.html): shared English and Simplified Chinese terms for KeyDog, PureRec and ZipFox, with app-specific sections.
-- [KeyDog / 密钥狗](keydog-index.html): policy for KeyDog 1.2.2 (23), including Google ads, consent, Billing and local Pro/usage records; last updated November 9, 2026.
-- [PureRec](purerec-index.html): separate policy for PureRec.
-- [ZipFox](zipfox-index.html): bilingual policy for ZipFox 0.1.0 (1), covering local archives, working files, broad storage access, Google ads, privacy choices and Play Billing; last updated November 9, 2026.
-- [ZipFox review / 信息收集与核查记录](zipfox-review.md): implementation evidence, official sources and release items to verify.
+统一维护 KeyDog、PureRec、ZipFox 的政策和源码核查资料。最近整理：**2026-11-10**。运营者及联系邮箱沿用现有政策：KongQBin（once512），kong5664246@gmail.com。
 
-The KeyDog policy describes the current app implementation. Review it and the Play Console Data safety declarations whenever file handling, permissions or third-party SDKs change, especially before adding advertising or billing.
+## 政策入口
 
-Repository files are not automatically a published website. If using GitHub Pages, configure and verify public access to the HTML policy URL before adding it to the app or store listing.
+| 应用 | 当前源码 | 隐私政策 | 专属服务条款 | 核查状态 |
+| --- | --- | --- | --- | --- |
+| KeyDog／密钥狗 | 1.2.2（23） | [本地](keydog-index.html) · [公开地址](https://once512.github.io/privacy/keydog-index.html)（中英） | [英文](terms.html#keydog) · [中文](terms.html#keydog-zh) | [2026-11-10 已采集](docs/reviews/keydog.md)，政策日期 2026-11-10 |
+| PureRec | 0.1.44（58） | [本地](purerec-index.html) · [公开地址](https://once512.github.io/privacy/purerec-index.html)（中英） | [英文](terms.html#purerec) · [中文](terms.html#purerec-zh) | [2026-11-10 已采集](docs/reviews/purerec.md)，本轮更新政策 |
+| ZipFox | 0.1.5（6） | [本地](zipfox-index.html) · [公开地址](https://once512.github.io/privacy/zipfox-index.html)（中英） | [英文](terms.html#zipfox) · [中文](terms.html#zipfox-zh) | [2026-11-10 已复核](docs/reviews/zipfox.md)，本轮更新政策 |
 
-Reference: [Google Play User Data policy](https://support.google.com/googleplay/android-developer/answer/10144311?hl=en).
+公共服务条款：[本地](terms.html) · [公开地址](https://once512.github.io/privacy/terms.html)，含英文及简体中文。表中公开地址为固定发布路径，线上生效以公开页面版本和日期为准。源码版本不代表商店上架版本，也不代表对应政策已经复核。
 
-## Maintaining the common terms
+## 目录
 
-Add a new app to the explicit scope list and review its specific risks before using these terms for it. Review actual purchase screens and subscription conditions before adding paid features. Maintain the provider identity and contact details consistently with the store listing. The common terms preserve mandatory consumer rights and do not replace app-specific privacy policies.
+- 根目录 HTML：公开隐私政策和公共条款，保持已发布文件名及路径。
+- [docs/reviews/](docs/reviews/)：项目事实、源码证据、版本和未核实事项。
+- [docs/history/](docs/history/)：历史记录，仅作追溯。
+- [docs/MAINTENANCE.md](docs/MAINTENANCE.md)：维护流程和待办。
+- [scripts/validate.mjs](scripts/validate.mjs)：政策结构及文档本地链接校验。
 
-Publish and verify a publicly accessible HTML URL for terms.html before entering it as the Terms of Service link for each covered app in Play Console. A GitHub source-file URL is not a substitute for checking the rendered policy page.
+## 不同应用的规则
 
-References: [Google Play trader status declaration](https://support.google.com/googleplay/android-developer/answer/17594752), [EU guidance on unfair contract terms](https://europa.eu/youreurope/citizens/consumers/unfair-treatment/unfair-contract-terms/index_en.htm).
+| 项目 | KeyDog | PureRec | ZipFox |
+| --- | --- | --- | --- |
+| 权限 | SAF 文档／目录 | 麦克风、前台服务、SAF 目录 | 所有文件访问／旧版存储 |
+| 激励奖励 | 一次对应加密／恢复，每周一清零 | 30 分钟本地 Pro，可累加 | 一次对应压缩／解压，每周一清零 |
+| 免费使用 | 每天成功加密／恢复各 3 次 | 基础录音免费，部分工具需 Pro | 每天成功压缩／解压各 3 次 |
+| 购买离线缓存 | 订阅 24 小时，永久无计时到期 | 订阅 24 小时，永久无计时到期 | 两类均 24 小时 |
+| 主要风险 | 密码／分片遗失、恢复后清理 | 私有录音随卸载丢失、外部副本独立保留 | 覆盖、源删除、共享目录明文残留 |
 
+## 维护入口
 
-## PureRec policy review — November 7, 2026
+先核对源码和实际发布配置，再更新对应隐私政策及必要的专属条款；将证据、版本和待核实事项写入核查记录。在根目录运行 `node scripts/validate.mjs` 及 `git diff --check` 后再发布，发布后验证匿名可访问的实际政策页面。
 
-The PureRec privacy policy is now bilingual (English / Simplified Chinese) and covers the current AdMob/GMA, UMP and Play Billing implementation, local audio and calibration metadata, exports, retention/deletion, support and privacy choices. The common terms retain their existing consumer protections and KeyDog-specific text; new PureRec-only terms cover monthly renewal, one-time purchases, restoring access, the 24-hour subscription verification cache, 30-minute local rewarded access and experimental processing limits.
+本轮更新说明见 [2026-11-10 政策同步记录](docs/history/2026-11-10-policy-update.md)。四份公开 HTML 均为中英文，日期为 2026-11-10。
 
-Checked against PureRec develop 4f3da3b and Google’s mobile ads data disclosure and subscription cancellation guidance. HTML nesting, language sections and local links were checked. Contact details remain as previously supplied: kong5664246@gmail.com. Store identity, contact mailbox operation, regional consent messages, target-audience declarations and Play Data safety answers must reflect the actual distribution configuration; this edit does not modify those consoles or verify legal compliance in every jurisdiction. No KeyDog implementation review was performed. Publishing and checking the live URLs is a separate step.
-
-## KeyDog policy review — November 8, 2026
-
-Updated KeyDog privacy and both language versions of the KeyDog-specific terms for 1.1.14 (19): Dog/share terminology, release as deletion, separate management and internal selection, independent shares and backups, local warning preferences, recovery cleanup and monthly renewal versus one-time purchase. Rechecked current Google Mobile Ads 25.5.0 data disclosure and Google Play cancellation guidance. PureRec-specific sections and its separate privacy policy are unchanged. Cosmetic home animation changes introduce no additional data processing.
-
-## KeyDog reward update — November 9, 2026
-
-KeyDog 1.2.0 replaces thirty-minute rewarded Pro with one operation-specific ad credit, reset each Monday using the device’s local calendar. Updated local storage, retention and both KeyDog terms sections. The old timer no longer activates Pro. PureRec still uses its own thirty-minute reward policy; its sections are unchanged.
-
-## KeyDog free feature access — November 9, 2026
-
-KeyDog 1.2.2 removes the Pro gate from direct and batch Dog-file sharing. Free users have access to encryption/recovery features within their usage allowance; sharing and export consume no task uses. Paid Pro retains unlimited tasks and no native ads. Updated KeyDog privacy and both language versions of its terms; PureRec-specific sections are unchanged.
+历史维护内容已归档至 [原 README 记录](docs/history/policy-notes-through-2026-11-09.md)。本地内容处理与 Google 广告、同意、支付的数据处理需分别披露；联系身份、目标市场、年龄和后台 Data safety 仍需与实际运营核对。

@@ -10,13 +10,16 @@
         h1, h2 { color: #111; }
         ul { padding-left: 20px; }
         a { color: #185abc; }
+        nav { padding: 14px 18px; background: #f3f5f8; border-radius: 8px; }
+        section + section { border-top: 1px solid #ddd; margin-top: 40px; padding-top: 20px; }
     </style>
 </head>
 <body>
-    <nav aria-label="Related documents"><a href="terms.html">Terms of Service / 服务条款</a></nav>
+    <nav aria-label="Language and related documents"><a href="#english">English</a> · <a href="#chinese" lang="zh-CN">简体中文</a> · <a href="terms.html">Terms of Service / 服务条款</a></nav>
 <main>
-    <h1>Privacy Policy for KeyDog - File Encryption</h1>
-    <p>Last updated: <time datetime="2026-11-09">November 9, 2026</time></p>
+    <h1>KeyDog Privacy Policy / 密钥狗隐私政策</h1>
+    <p>Last updated / 更新日期：<time datetime="2026-11-10">November 10, 2026 / 2026年11月10日</time></p>
+    <section id="english" lang="en">
     <p>KeyDog (密钥狗), application ID <code>app.keydog</code>, is a file encryption application provided by KongQBin (GitHub account: once512). This policy covers version 1.2.2 (23). This is the initial production release, with advertising and optional paid Pro access.</p>
 
     <h2>1. Local processing and data collection</h2>
@@ -51,17 +54,70 @@
     <p>We do not hold a server-side recovery copy of your passwords or keys. If the required secret or enough key shares are lost, we cannot recover them for you. Preset-passphrase mode deliberately permits local candidate searching: with an empty original password, another person using the same public presets and rules can also recover the file. A short original password can also be guessed. This mode does not provide the same protection as a strong private password or securely held keys.</p>
 
     <h2>6. Google advertising, purchases and support</h2>
-    <p><strong>Advertising:</strong> Non-Pro users may see native ads below the encryption or recovery action. Users can voluntarily complete a rewarded ad to earn one encryption use from the encryption screen, or one recovery use from the recovery screen. Credits are granted only when the SDK confirms the reward and are tracked separately. Daily free uses are consumed before ad credits; only successful tasks count. Unused ad credits reset every Monday at the start of the device’s local calendar day. Ad credits do not activate Pro or hide native ads. Direct key sharing is available to free users without ad credits. Active Pro hides native ads. Google Mobile Ads SDK (AdMob, version 25.5.0 in this release) processes and shares network and device information, including IP address, advertising/app-set identifiers and applicable device/account identifiers, ad and app interactions, and performance/diagnostic information. These support ad delivery, measurement, analytics and fraud prevention. IP addresses may be used to infer approximate location. The SDK protects its transmitted data with TLS.</p>
-    <p><strong>Your choices:</strong> Google User Messaging Platform (UMP) requests applicable privacy choices before ad requests are allowed. A “Privacy choices” entry in the Pro dialog is shown when required by UMP. You can also use Android's advertising-ID controls and Google's ad settings. Ad personalization and available ad types depend on region, settings and consent. Declining an optional advertising choice does not remove the daily free file-processing allowance. Pro hides native placements but does not disable necessary billing or privacy-service communication; rewarded ads remain voluntary where offered.</p>
-    <p><strong>Purchases:</strong> Monthly Pro is an automatically renewing subscription; permanent Pro is a one-time purchase for KeyDog. Purchases are handled by Google Play Billing. Buying permanent Pro does not cancel an existing monthly subscription; manage or cancel its renewal separately in <a href="https://play.google.com/store/account/subscriptions">Google Play subscriptions</a>. Uninstalling does not cancel a subscription. Google processes payment/account information under its own terms. The app receives product, purchase-token, transaction-state and ownership information to activate access, acknowledge purchases and restore ownership through Google Play. We do not receive your card number or billing address. Subscription ownership is periodically refreshed, with a bounded local offline cache; the app does not receive an exact subscription-expiration date through its Billing client. Pending payments do not activate Pro until confirmed as purchased.</p>
+    <p><strong>Advertising:</strong> Non-Pro users may see native ads below the encryption or recovery action. Users can voluntarily complete a rewarded ad to earn one encryption use from the encryption screen, or one recovery use from the recovery screen. Credits are granted only when the SDK confirms the reward and are tracked separately. Daily free uses are consumed before ad credits; only successful tasks count. Unused ad credits reset every Monday at the start of the device’s local calendar day. Ad credits do not activate Pro or hide native ads. Direct key sharing is available to free users without ad credits. Free users have three successful encryption tasks and three successful recovery tasks per local calendar day; a batch counts as one task and failures do not consume a use. Active Pro hides native ads. Google Mobile Ads SDK (AdMob, version 25.5.0 in this release) processes and shares network and device information, including IP address, advertising/app-set identifiers and applicable device/account identifiers, ad and app interactions, and performance/diagnostic information. These support ad delivery, measurement, analytics and fraud prevention. IP addresses may be used to infer approximate location. The SDK protects its transmitted data with TLS.</p>
+    <p><strong>Your choices:</strong> Google User Messaging Platform (UMP, version 4.0.0) requests applicable privacy choices before ad requests are allowed. A “Privacy choices” entry in the Pro dialog is shown when required by UMP. You can also use Android's advertising-ID controls and Google's ad settings. Ad personalization and available ad types depend on region, settings and consent. Declining an optional advertising choice does not remove the daily free file-processing allowance. Pro hides native placements but does not disable necessary billing or privacy-service communication; rewarded ads remain voluntary where offered.</p>
+    <p><strong>Purchases:</strong> Monthly Pro is an automatically renewing subscription; permanent Pro is a one-time purchase for KeyDog. Purchases are handled by Google Play Billing 9.1.0. Buying permanent Pro does not cancel an existing monthly subscription; manage or cancel its renewal separately in <a href="https://play.google.com/store/account/subscriptions">Google Play subscriptions</a>. Uninstalling does not cancel a subscription. Google processes payment/account information under its own terms. The app receives product, purchase-token, transaction-state and ownership information to activate access, acknowledge purchases and restore ownership through Google Play. We do not receive your card number or billing address through the app. Google Play may provide order records for developer support and order management. Subscription ownership is periodically refreshed, with a local offline cache of up to 24 hours; permanent ownership has no scheduled local expiry, but successful store queries can update it. Refunds or revocations may not be reflected immediately while offline. There is no developer-operated purchase-verification backend in this version; the app does not receive an exact subscription-expiration date through its Billing client. Pending payments do not activate Pro until confirmed as purchased.</p>
     <p>Relevant third-party information: <a href="https://policies.google.com/privacy">Google Privacy Policy</a>, <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google Mobile Ads data disclosure</a> and <a href="https://myadcenter.google.com/">Google ad controls</a>. Third-party retention and deletion are governed by their policies and your account controls. We cannot delete Google-held billing or advertising records from local app storage.</p>
     <p><strong>Support:</strong> If you email us, we receive the address, message and attachments you choose to send. We use them to respond and handle the request, retaining correspondence only as needed for that purpose or legal requirements. Our email provider processes it to deliver and store email. Do not send passwords, private keys or sensitive file contents. You can request deletion of support correspondence at the address below, subject to required retention.</p>
 
-    <h2>7. Changes to this policy</h2>
+    <h2>7. Your choices and international processing</h2>
+    <p>You can revoke document access, manage Google privacy controls, remove local files and clear app data, after independently backing up needed keys and files. Depending on applicable law, you may request access, correction, deletion, restriction, portability, objection or withdrawal of consent, or complain to a competent data-protection authority. Contact us about information you have provided; we cannot remotely retrieve or erase content held only on your device or directly erase Google-held records. Google and email or document providers may process data outside your country under their policies and applicable safeguards. KeyDog is a general file utility, does not ask for age and is not specifically directed to children; contact us if you believe a child has improperly supplied information.</p>
+
+    <h2>8. Changes to this policy</h2>
     <p>We will update this page and its revision date when our data practices change. We will describe material changes to advertising, payments, network services or other data processing and provide any required notices and choices before the changed processing begins.</p>
 
-    <h2>8. Contact us</h2>
+    <h2>9. Contact us</h2>
     <p>For privacy questions or support-data deletion requests, contact KongQBin (once512) at <a href="mailto:kong5664246@gmail.com">kong5664246@gmail.com</a>.</p>
+    </section>
+    <section id="chinese" lang="zh-CN">
+    <h2>隐私政策</h2>
+    <p>KeyDog（密钥狗），应用 ID 为 <code>app.keydog</code>，由 KongQBin（GitHub：once512）提供。本政策对应 1.2.2（23）初始正式发布版本，包含广告及可选付费 Pro。</p>
+
+    <h2>1. 本地处理与信息收集</h2>
+    <p>KeyDog 读取您选择的文件和目录，在设备上处理内容、名称、目录结构、大小及完整性哈希，用于加密、恢复和结果验证。加解密、密码派生及预设口令恢复均在本机执行。</p>
+    <p>我们不将所选文件内容、密码或密钥上传到应用后端，也不将这些内容放入广告请求。应用无需独立账户，不运营自己的支付或文件服务器。Google 广告、同意与支付服务会处理下文披露的其他数据；本地密码运算不代表整个应用不联网。</p>
+
+    <h2>2. 文件访问与权限</h2>
+    <p>应用通过 Android 系统文档选择器（SAF）取得您所选文件或目录的访问授权，目录授权可能包括其下文件。为完成、继续操作或日后访问，应用可能保留系统文档授权，仍受 Android 及文档提供方权限限制。</p>
+    <p>互联网及网络状态权限用于 Google 广告、隐私选项和购买。Google SDK 可能合并广告 ID、广告服务及支付权限。应用不申请所有文件访问、广泛存储、通知、麦克风、相机、通讯录或运行时位置权限。广告服务可通过 IP 推断大致位置，而无需位置权限。</p>
+    <p>如在系统选择器中使用云端文档提供方，该服务可能按其自身设置和隐私政策下载、上传、同步所选文件、输出或删除。本地加解密不阻止文档提供方自行传输数据。</p>
+
+    <h2>3. 设备上保存的数据</h2>
+    <ul>
+        <li><strong>输出和元数据：</strong>容器和恢复文件写入所选位置，容器包含恢复及校验所需元数据。加密文件名保留原名并添加 <code>.kdog</code>，密钥文件名也包含原名，因此名称本身可能透露信息。</li>
+        <li><strong>Dog 保护：</strong>Dog 是密码学密钥份额文件，不是动物或线上账户。生成的 <code>.dog</code> 保存在应用私有空间，直到您释放（删除），或应用在撤销／成功恢复时清理对应文件。Android 沙箱限制普通应用访问，但这些密钥文件不额外受您的加密密码保护。请安全保管导出分片，并按需要分别存放。</li>
+        <li><strong>密码与预设口令：</strong>普通密码输入仅用于操作，不写入密码数据库。为在中断后仍可取回完整预设口令，应用将其加密保存在待确认操作记录中，由 Android Keystore 密钥保护，直至处理该结果或撤销。</li>
+        <li><strong>临时文件：</strong>处理及验证可能在私有缓存生成临时归档，包括明文副本。应用尝试在结束时删除，并在启动时清理残留 KeyDog 缓存；中断可能使临时文件保留至清理发生。</li>
+        <li><strong>操作记录和偏好：</strong>待确认记录可能包含文档位置、相对路径、大小、哈希、已创建输出及密钥引用，用于校验、撤销和处理中断，结果处理完成后删除。偏好包括语言、预设口令警告、加密／恢复 Dog 警告、每日成功次数、购买缓存及验证时间、分别计算的广告加密／恢复余额和最近周重置边界。这些记录本地保留至更改或清除应用数据，不发送到开发者服务器。Android 13 及以上还由系统保存应用语言选择。</li>
+    </ul>
+    <p>当前配置关闭 Android 应用自动备份，但私有空间之外另存或导出的文件仍可能被设备或文档提供方备份、同步。</p>
+
+    <h2>4. 导出、分享与剪贴板</h2>
+    <p>导出会向您所选位置写入密钥副本；分享时 Android 授予接收应用临时只读权限，接收服务自行控制后续保存或传输。我们无法删除已经导出、分享或备份的副本。</p>
+    <p>加密页“管理我的狗”提供导出、分享及释放。导出、直接分享及批量分享均无需 Pro，且不消耗加密或恢复次数。恢复页“使用内部的狗”只用于选择恢复所需内部文件，不提供导出、分享或释放。外部 Dog 可经系统选择器选择；选择本身不会将其复制进私有密钥库。</p>
+    <p>主动复制完整预设口令会将其放入 Android 剪贴板，访问及保存期限取决于系统与设备功能，包括可能启用的同步。请将其视作敏感信息，不再需要时清除。</p>
+
+    <h2>5. 保留、删除与恢复</h2>
+    <p>加密并验证后，您可保留源文件、要求删除或撤销加密。撤销尝试删除本次输出及应用内密钥，同时保留源文件。恢复并验证后，应用尝试删除输入容器和对应密钥，包括在权限允许时删除所选外部密钥。权限不足或中断可能使清理失败，请核对提示。</p>
+    <p>“释放”是确认后删除所选应用内 Dog，确认时要求您确保已有安全备份；它不转移文件、不撤销导出副本，也不使文件日后可找回。清数据或卸载会移除私有密钥和待确认记录，但不移除外部输出、导出密钥、分享或云端副本，应通过相应存储或接收服务管理。清数据或卸载还可能丢失本地次数、购买缓存和广告余额；有效付费购买可通过同一 Google Play 账户恢复，广告余额则是本地记录，不是账户购买。</p>
+    <p>普通删除不保证擦除闪存、回收站、备份及同步副本。删除密钥或清数据前，请确认仍持有所需密码或足够的独立分片。门限恢复需要同次加密的足够数量不同有效分片；复制或改名同一份分片不增加独立数量，其他操作的分片也不能替代。应用私有存储不能作为独立备份，设备故障、遗失、清数据或卸载可能导致密钥丢失。</p>
+    <p>我们没有服务器端密码或密钥恢复副本，无法找回遗失的秘密或不足的分片。预设模式允许本地候选搜索，原密码留空时，其他人可用相同公开预设及规则恢复完整文件；短密码也可能被猜中。该模式的保护不等同于强私密密码或安全保管的密钥。</p>
+
+    <h2>6. Google 广告、购买与支持</h2>
+    <p><strong>广告：</strong>非 Pro 用户可能在加密或恢复操作下方看到原生广告。主动观看激励广告并由 SDK 确认奖励后，加密入口增加 1 次加密，恢复入口增加 1 次恢复，分别累计。先消耗每日免费额度，仅成功任务计次；未用广告余额按设备本地日历于每周一零点清零。广告余额不激活 Pro、不隐藏原生广告，免费直接分享也不需要广告余额。免费用户每天成功加密、恢复各 3 次，批量计一次，失败不扣次。Pro 隐藏原生广告。Google Mobile Ads 25.5.0 为广告、分析及防欺诈处理和共享网络、设备信息，包括 IP、广告／应用集及适用设备或账户标识、应用与广告互动、性能诊断；IP 可推断大致位置。SDK 传输使用 TLS。</p>
+    <p><strong>隐私选择：</strong>UMP 4.0.0 在允许广告请求前处理适用选择，需要时在 Pro 弹窗提供隐私选项。您也可使用 Android 广告 ID 控制和 Google 广告设置；个性化及广告类型取决于地区、设置和同意。拒绝可选广告同意不取消每日免费额度。Pro 隐藏原生广告，但不关闭必要的购买或隐私服务通信；在提供激励广告的情况下，观看仍是自愿的。</p>
+    <p><strong>购买：</strong>Pro 月订阅自动续订，永久 Pro 为 KeyDog 一次性购买，由 Play Billing 9.1.0 处理。买断不取消现有月订阅，请在 <a href="https://play.google.com/store/account/subscriptions">Google Play 订阅设置</a>单独管理；卸载也不取消。Google 按其条款处理付款和账户信息。应用接收商品、购买令牌、交易及拥有状态，以激活、确认和恢复购买，不通过应用向我们提供银行卡号或账单地址；Play 可能提供用于订单支持和管理的交易记录。订阅离线缓存最长 24 小时，永久状态无预设本地到期日，但成功查询可更新；离线时退款或撤销可能不立即反映。当前没有开发者购买验证后端，Billing 客户端不提供精确订阅到期日；待支付状态不激活 Pro。</p>
+    <p>参见 <a href="https://policies.google.com/privacy">Google 隐私政策</a>、<a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">广告 SDK 数据披露</a>及 <a href="https://myadcenter.google.com/">Google 广告控制</a>。第三方保存和删除按其规则及账户控制执行，清除本地数据不能删除 Google 的记录。</p>
+    <p><strong>支持：</strong>您主动发送邮件时，我们收到邮箱地址、正文和附件，用于处理及回复，按处理所需或法定义务保留。邮箱服务商用于传递及存储邮件。请勿发送密码、私钥或敏感文件内容；可通过下方地址要求删除支持邮件，依法必须保留的除外。</p>
+
+    <h2>7. 您的选择与跨境处理</h2>
+    <p>备份所需密钥及文件后，您可撤回文档授权、管理 Google 隐私选项、删除文件或清除数据。依据适用法律，您可能享有访问、更正、删除、限制、可携带、反对、撤回同意或向有管辖权机构投诉等权利；请联系我们。我们无法远程读取或删除仅存于您设备上的文件，也不能直接删除 Google 记录。Google、邮箱或文档服务商可能按其政策及适用保障措施跨境处理。KeyDog 为通用文件工具，不询问年龄，不专门面向儿童；如认为儿童不当提供了信息，请联系我们。</p>
+
+    <h2>8. 政策更新</h2>
+    <p>处理方式变化时，我们会更新页面及日期；对广告、支付、联网或其他重大变化提供说明，并在变化开始前依法告知及提供所需选择。</p>
+    <h2>9. 联系我们</h2>
+    <p>隐私问题或支持信息删除请求，请联系 KongQBin（once512）：<a href="mailto:kong5664246@gmail.com">kong5664246@gmail.com</a>。中英文旨在表达相同内容，翻译差异不限制您的强制性法定权利。</p>
+    </section>
 </main>
 </body>
 </html>
